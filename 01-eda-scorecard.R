@@ -38,7 +38,7 @@ ggplot(
 ## this data given what we have seen so far? Use a graph to illustrate this
 ggplot() + ...
 
-# What is the relationship between college attendance cost and faculty salaries?
+# What is the relationship between net cost of attendance and faculty salaries?
 # How does this relationship differ across types of colleges?
 ggplot() + ...
 

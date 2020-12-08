@@ -49,50 +49,36 @@ ggplot(
 # How does this relationship differ across types of colleges?
 
 ## using geom_point()
-ggplot(
-  data = scorecard,
-  mapping = aes(x = cost, y = avgfacsal)
-) +
+ggplot(data = scorecard,
+       mapping = aes(x = netcost, y = avgfacsal)) +
   geom_point() +
   geom_smooth()
 
 ## geom_point() with alpha transparency to reveal dense clusters
-ggplot(
-  data = scorecard,
-  mapping = aes(x = cost, y = avgfacsal)
-) +
+ggplot(data = scorecard,
+       mapping = aes(x = netcost, y = avgfacsal)) +
   geom_point(alpha = .2) +
   geom_smooth()
 
 ## geom_hex()
-ggplot(
-  data = scorecard,
-  mapping = aes(x = cost, y = avgfacsal)
-) +
+ggplot(data = scorecard,
+       mapping = aes(x = netcost, y = avgfacsal)) +
   geom_hex() +
   geom_smooth()
 
 ## geom_point() with smoothing lines for each type
-ggplot(
-  data = scorecard,
-  mapping = aes(
-    x = cost,
-    y = avgfacsal,
-    color = type
-  )
-) +
+ggplot(data = scorecard,
+       mapping = aes(x = netcost,
+                     y = avgfacsal,
+                     color = type)) +
   geom_point(alpha = .2) +
   geom_smooth()
 
 ## geom_point() with facets for each type
-ggplot(
-  data = scorecard,
-  mapping = aes(
-    x = cost,
-    y = avgfacsal,
-    color = type
-  )
-) +
+ggplot(data = scorecard,
+       mapping = aes(x = netcost,
+                     y = avgfacsal,
+                     color = type)) +
   geom_point(alpha = .2) +
   geom_smooth() +
   facet_grid(. ~ type)

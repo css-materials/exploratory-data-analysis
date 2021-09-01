@@ -25,7 +25,7 @@ ggplot(
   mapping = aes(x = satavg)
 ) +
   geom_histogram() +
-  facet_wrap(~type)
+  facet_wrap(facets = vars(type))
 
 ## using a frequency polygon
 ggplot(
@@ -81,7 +81,7 @@ ggplot(data = scorecard,
                      color = type)) +
   geom_point(alpha = .2) +
   geom_smooth() +
-  facet_grid(. ~ type)
+  facet_grid(cols = vars(type))
 
 # How are a college's Pell Grant recipients related to the average student's education debt?
 ## Two continuous variables suggest a scatterplot would be appropriate

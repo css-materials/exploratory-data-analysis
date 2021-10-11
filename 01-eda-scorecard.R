@@ -25,7 +25,7 @@ ggplot(
   mapping = aes(x = ________)
 ) +
   geom_________() +
-  facet_wrap(~ ________)
+  facet_wrap(facets = vars(________))
 
 ## using a frequency polygon
 ggplot(

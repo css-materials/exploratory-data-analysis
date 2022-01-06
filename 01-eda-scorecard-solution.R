@@ -36,13 +36,26 @@ ggplot(
 
 ## Now we can see the averages for each college type
 ## are based on widely varying sample sizes
-ggplot(
-  data = scorecard,
-  mapping = aes(x = type)
-) +
+scorecard %>%
+  drop_na(satavg) %>%
+  ggplot(
+    mapping = aes(x = type)
+  ) +
   geom_bar()
 
-## There are far fewer private, for-profit colleges than the other categories
+# what proportion of observations have NA for satavg?
+scorecard %>%
+  group_by(type) %>%
+  summarize(prop = sum(is.na(satavg)) / n()) %>%
+  ggplot(
+    mapping = aes(x = type, y = prop)
+  ) +
+  geom_col()
+
+## There are far fewer private, for-profit colleges than the other categories.
+## Private, for-profit colleges disproportionately fail to report average SAT scores
+## compared to the other categories.
+## 
 ## A boxplot alone would not reveal this detail, which could be important in future analysis
 
 # What is the relationship between college attendance cost and faculty salaries?

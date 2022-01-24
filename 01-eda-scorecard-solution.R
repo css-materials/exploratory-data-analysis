@@ -111,7 +111,7 @@ ggplot(
 ) +
   geom_jitter()
 
-## geom_point() with alpha transparency                                                                       Meh, didn't really do much. What if we make our data points semi-transparent using the `alpha` aesthetic?
+## geom_point() with alpha transparency
 ggplot(
   data = scorecard,
   mapping = aes(x = pctpell, y = debt)

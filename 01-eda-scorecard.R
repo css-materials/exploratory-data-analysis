@@ -1,6 +1,6 @@
 # load required packages
 library(tidyverse)
-library(rcfss)
+library(rcis)
 
 # view header of the dataset
 scorecard

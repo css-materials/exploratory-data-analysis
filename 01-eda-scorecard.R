@@ -1,4 +1,4 @@
-# practice conducting EDA with U.S. college data (2018-2019) 
+# Practice conducting EDA with U.S. college data (2018-2019) 
 
 # load required packages
 library(tidyverse)
@@ -62,7 +62,7 @@ scorecard %>%
   geom_col()
 
 ## What do these graphs reveal?
-## Provide a couple of sentences to interpret it (preface each line with a #)
+## Provide a couple of sentences to interpret them (preface each line with a #)
 
 
 

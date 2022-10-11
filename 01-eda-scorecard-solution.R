@@ -1,4 +1,4 @@
-# practice conducting EDA with U.S. college data (2018-2019) -- solutions
+# Practice conducting EDA with U.S. college data (2018-2019) -- solutions
 
 # load required packages
 library(tidyverse)

@@ -20,7 +20,6 @@ ggplot(
 ) +
   geom_boxplot()
 
-
 ## using a faceted histogram
 ggplot(
   data = scorecard,
@@ -42,6 +41,21 @@ ggplot(
 # But this doesn't reveal the entire picture. 
 # From the last two graphs, we can also see the averages for each college type are 
 # based on widely varying sample sizes.
+
+
+## print the same results as table using dplyr 
+## e.g. type of university as row and the satavg mean as column
+
+# dlyr syntax using group_by() and summarize()
+scorecard %>% 
+  group_by(type) %>%
+  summarize(mean_type = mean(satavg, na.rm = TRUE))
+
+# with aggregate()
+aggregate(scorecard$satavg, 
+          by = list(type = scorecard$type), 
+          mean, na.rm = TRUE)
+
 
 
 ## QUESTION 2. Based on these results, we can further inquiry our data to check the

@@ -40,6 +40,10 @@ ggplot(
 ## Provide a couple of sentences to interpret the graphs (preface each line with a #)
 
 
+## print the same results as table using dplyr 
+## e.g. type of university as row and the satavg mean as column
+## hint: see dplyr slides for examples
+
 
 ## QUESTION 2. Based on these results, we can further inquiry our data to check the
 ## observations that have valid SAT averages scores, thus filtering all the "NA":

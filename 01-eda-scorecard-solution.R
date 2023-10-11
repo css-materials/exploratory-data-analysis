@@ -20,6 +20,7 @@ ggplot(
 ) +
   geom_boxplot()
 
+
 ## using a faceted histogram
 ggplot(
   data = scorecard,
@@ -36,8 +37,9 @@ ggplot(
   geom_freqpoly()
 
 ## What do these graphs reveal about average SAT scores by type of college?
-# According to this graphs, private, nonprofit schools have the highest average SAT score,
-# followed by public and then private, for-profit schools. But this doesn't reveal the entire picture. 
+# According to this graphs, "private, nonprofit" schools have the highest average SAT score,
+# followed by "public" and then "private, for-profit" schools. 
+# But this doesn't reveal the entire picture. 
 # From the last two graphs, we can also see the averages for each college type are 
 # based on widely varying sample sizes.
 
